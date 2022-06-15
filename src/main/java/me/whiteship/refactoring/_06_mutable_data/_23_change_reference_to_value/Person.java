@@ -9,7 +9,7 @@ public class Person {
     }
 
     public void officeAreaCode(String areaCode) {
-        this.officeTelephoneNumber.areaCode(areaCode);
+        this.officeTelephoneNumber = new TelephoneNumber(areaCode, officeNumber()); //새로운 객체 생성
     }
 
     public String officeNumber() {
@@ -17,7 +17,7 @@ public class Person {
     }
 
     public void officeNumber(String number) {
-        this.officeTelephoneNumber.number(number);
+        this.officeTelephoneNumber = new TelephoneNumber(officeAreaCode(), number); //새로운 객체 생성
     }
 
 }
